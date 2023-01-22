@@ -1,0 +1,34 @@
+{
+  "name": "space-mmorpg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server:dev": "nodemon ./server/io.server.js",
+    "build": "node ./config/esbuild.config.js",
+    "server": "node ./server/io.server.js",
+    "server:test": "node ./server/io.server.js &",
+    "client:test": "node ./test/io.client.mjs",
+    "test": "npm run server:test && npm run client:test",
+    "start": "npm run build && npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniellukonis/space-mmorpg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniellukonis/space-mmorpg/issues"
+  },
+  "homepage": "https://github.com/daniellukonis/space-mmorpg#readme",
+  "dependencies": {
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.4",
+    "nodemon": "^2.0.20"
+  }
+}
